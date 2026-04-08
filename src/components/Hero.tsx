@@ -20,10 +20,15 @@ function PinIcon() {
 
 export default function Hero() {
   return (
-    <section id="hero" className="hero-section" style={{ backgroundImage: `linear-gradient(160deg, rgba(13,13,13,0.88) 0%, rgba(26,26,26,0.75) 60%, rgba(13,13,18,0.85) 100%), url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center top' }}>
-      {/* Decorative background stripes */}
+    <section
+      id="hero"
+      className="hero-section"
+      style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center top' }}
+    >
+      {/* Dark overlay — separate from the image so cover only applies to the photo */}
+      <div className="hero-overlay" aria-hidden="true" />
+      {/* Decorative stripes + glow on top */}
       <div className="hero-stripes" aria-hidden="true" />
-      <div className="hero-glow" aria-hidden="true" />
 
       <div className="hero-inner">
         {/* Text */}
@@ -69,10 +74,9 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* Barber Pole — full size on desktop, small on mobile */}
-        <div className="hero-pole hero-animate" style={{ animationDelay: '0.5s' }}>
-          <span className="pole-desktop"><BarberPole /></span>
-          <span className="pole-mobile"><BarberPole small /></span>
+        {/* Barber Pole — full height of hero, positioned absolutely */}
+        <div className="hero-pole-fullheight hero-animate" style={{ animationDelay: '0.5s' }}>
+          <BarberPole fullHeight />
         </div>
       </div>
     </section>

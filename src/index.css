@@ -58,10 +58,25 @@ body {
   overflow: hidden;
 }
 
+/* Full overlay — sits between photo and content */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(10,10,10,0.90) 0%,
+    rgba(20,20,20,0.78) 50%,
+    rgba(10,10,16,0.88) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* Decorative diagonal stripes */
 .hero-stripes {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: repeating-linear-gradient(
     -55deg,
     rgba(204,0,0,0.03) 0px,
@@ -91,14 +106,19 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  flex-wrap: wrap;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-.hero-text { flex: 1; min-width: 280px; }
+.hero-text { flex: 1; min-width: 280px; padding-right: 120px; }
+
+@media (max-width: 900px) {
+  .hero-text { padding-right: 80px; }
+}
+
+@media (max-width: 600px) {
+  .hero-text { padding-right: 56px; }
+}
 
 .hero-badge {
   display: inline-block;
@@ -169,21 +189,26 @@ body {
   color: #666;
 }
 
-.hero-pole {
-  flex-shrink: 0;
+/* Full-height pole — positioned absolutely on the right */
+.hero-pole-fullheight {
+  position: absolute;
+  right: 6%;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 3;
   display: flex;
-  justify-content: center;
+  align-items: stretch;
 }
 
-/* Desktop pole: show full size, hide small */
-.pole-desktop { display: block; }
-.pole-mobile  { display: none; }
+@media (max-width: 900px) {
+  .hero-pole-fullheight { right: 2%; width: 64px; }
+}
 
 @media (max-width: 600px) {
   .hero-title { font-size: 2.6rem; }
-  .hero-inner { justify-content: center; gap: 2rem; }
-  .pole-desktop { display: none; }
-  .pole-mobile  { display: block; }
+  .hero-inner { justify-content: center; }
+  .hero-pole-fullheight { right: 0; width: 44px; }
 }
 
 /* ══════════════════════════════════════
