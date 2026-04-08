@@ -2,6 +2,7 @@ import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import About from './components/About'
+import Gallery from './components/Gallery'
 import Testimonials from './components/Testimonials'
 import FindUs from './components/FindUs'
 import Footer from './components/Footer'
@@ -21,6 +22,7 @@ export default function App() {
         <Hero />
         <Services />
         <About />
+        <Gallery />
         <Testimonials />
         <FindUs />
       </main>

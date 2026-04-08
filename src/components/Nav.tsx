@@ -19,6 +19,7 @@ export default function Nav() {
         {[
           { label: 'Services', href: '#services' },
           { label: 'About', href: '#about' },
+          { label: 'Gallery', href: '#gallery' },
           { label: 'Reviews', href: '#testimonials' },
           { label: 'Find Us', href: '#findus' },
         ].map(({ label, href }) => (

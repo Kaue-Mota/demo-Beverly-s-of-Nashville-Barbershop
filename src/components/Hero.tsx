@@ -1,4 +1,5 @@
 import BarberPole from './BarberPole'
+import heroBg from '../assets/hero.png'
 
 function PhoneIcon() {
   return (
@@ -19,7 +20,7 @@ function PinIcon() {
 
 export default function Hero() {
   return (
-    <section id="hero" className="hero-section">
+    <section id="hero" className="hero-section" style={{ backgroundImage: `linear-gradient(160deg, rgba(13,13,13,0.88) 0%, rgba(26,26,26,0.75) 60%, rgba(13,13,18,0.85) 100%), url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center top' }}>
       {/* Decorative background stripes */}
       <div className="hero-stripes" aria-hidden="true" />
       <div className="hero-glow" aria-hidden="true" />
