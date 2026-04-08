@@ -14,7 +14,7 @@ export default function BarberPole({ small = false, fullHeight = false }: Barber
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
         {/* Top cap */}
         <div style={{
-          width: 64, height: 20, flexShrink: 0,
+          width: 44, height: 20, flexShrink: 0,
           background: 'linear-gradient(to bottom, #d0d0d0 0%, #888 50%, #d0d0d0 100%)',
           border: '2px solid #aaa',
           boxShadow: '0 -4px 10px rgba(0,0,0,0.4)',
@@ -29,7 +29,7 @@ export default function BarberPole({ small = false, fullHeight = false }: Barber
 
         {/* Cylinder — flex: 1 fills all remaining height */}
         <div style={{
-          width: 64, flex: 1,
+          width: 44, flex: 1,
           position: 'relative', overflow: 'hidden',
           boxShadow: 'inset -8px 0 16px rgba(0,0,0,0.35), inset 6px 0 12px rgba(255,255,255,0.18), 0 0 40px rgba(204,0,0,0.4), 0 0 80px rgba(0,0,0,0.6)',
         }}>
@@ -42,7 +42,7 @@ export default function BarberPole({ small = false, fullHeight = false }: Barber
 
         {/* Bottom cap */}
         <div style={{
-          width: 64, height: 20, flexShrink: 0,
+          width: 44, height: 20, flexShrink: 0,
           background: 'linear-gradient(to bottom, #888 0%, #d0d0d0 50%, #888 100%)',
           border: '2px solid #aaa',
           boxShadow: '0 4px 10px rgba(0,0,0,0.4)',
@@ -51,7 +51,7 @@ export default function BarberPole({ small = false, fullHeight = false }: Barber
 
         {/* Base */}
         <div style={{
-          width: 80, height: 14, flexShrink: 0,
+          width: 56, height: 14, flexShrink: 0,
           background: 'linear-gradient(to bottom, #888 0%, #555 100%)',
           borderRadius: '0 0 8px 8px',
           boxShadow: '0 4px 12px rgba(0,0,0,0.5)',
